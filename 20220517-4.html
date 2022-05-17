@@ -1,0 +1,31 @@
+<script>
+    // const o = {"a":"B", "c":"D"};
+    // function swap(o){
+    //     let space;
+    //     for (target in o){
+    //         space = target;
+    //         target = o["a"];
+    //         o["a"] = space;
+    //     }
+
+    //     return o;
+    // }
+
+    function swap(o){
+        const r = {};
+        for(const key in o){
+            const value = o[key];
+            r[value] = key;
+        }
+        return r;
+    }
+
+    const o2 = swap(o);
+    console.log(o2); //{"B":"a", "D":"c"}
+
+    //맵 버전
+    // const m1 = new Map();
+    // m1.set("a",1234);
+    // m2.set(new Date(), "Hello");
+    // const m2 = swapMap(m1);
+</script>

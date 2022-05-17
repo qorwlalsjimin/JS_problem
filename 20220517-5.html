@@ -1,0 +1,23 @@
+<script>
+    // function chunck(arr, target){
+    //     const result = [];
+    //     for(let i = 0; i<arr.length; i+=target){
+    //         result.push(arr.slice(i, target+i));
+    //     }
+    //     console.log(result);
+    // }
+
+    function chunck(arr, size){
+        if(arr.length === 0) return []; //필요 없
+
+        const r = [];
+        for(let i = 0; i<arr.length; i+=size){
+            r.push(arr.slice(i, i+size));
+        }
+        return r;
+    }
+
+    chunck([1,2,3,4,5],2); // [[1,2], [3,4], [5]]
+    chunck([1,2,3,4,5],3); // [[1,2,3], [4,5]]
+    chunck([],3);
+</script>

@@ -1,0 +1,22 @@
+<script>
+    let p1 = {x:0, y:2};
+    let p2 = move(p1, 3, 4);
+
+    // function move(p1, x, y){
+    //     let XY = {x,y};
+    //     XY.x = p1.x + x;
+    //     XY.y = p1.y + y;
+
+    //     return XY;
+    // }
+
+    function move(p,x,y){
+        return{
+            x: p.x + x,
+            y: p.y + y
+        }
+    }
+
+    console.log(p2); // {x:3, y:6}
+    console.log(p1); // p1 내용 안 변한 거 확인
+</script>
